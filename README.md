@@ -1,2 +1,5 @@
 # Synergy
-A platform where content creators can share the resources and peers can learn by filtering out the best resource
+A platform where content creators can share the resources and peers can learn by filtering out the best resources
+
+## Motive
+ - Lets Learn And Grow Together
