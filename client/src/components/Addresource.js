@@ -155,7 +155,7 @@ export function AddResource (props){
                                     <select style={{marginLeft:'1rem'}}name="search subcategories" id="subcategories" class="grid-80"  value={subcategory}  onChange={(e) => setSubcategory(e.target.value)}>
                                     <option value="operatingsystem" selected>Operating System</option>
                                     <option value="dbms">DBMS</option>
-                                    <option value="objectorientedprogramming">Object Oriented Programming</option>
+                                    <option value="oops">Object Oriented Programming</option>
                                     <option value="computernetwork">Computer Network</option>
                                     <option value="others">Others</option>
                                   </select>:

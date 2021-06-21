@@ -69,7 +69,7 @@ export function Home(){
           ]}
         />
           <Service section={sections[4]}
-          headers={["OS","DBMS","Oops","Computer Network","other"]}
+          headers={["Operating System","DBMS","Oops","Computer Network","other"]}
           images={[os,dbms,oops,cn,other]}
           paras={[
           ]}
