@@ -38,7 +38,7 @@ export function Home(){
       setPeople(data)
     }, [5])*/
     //to get all resources
-    const sections = ["Data Structures Algorithm","Web Development","Data Science","Cloud","Gate Subject","Others"]
+    const sections = ["Data Structure Algorithm","Web Development","Data Science","Cloud","Gate Subject","Others"]
     return (
        <div>      
           <Carousel/>
