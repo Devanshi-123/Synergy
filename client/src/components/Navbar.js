@@ -42,9 +42,9 @@ export function Navbar(props) {
             </button>
             <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                 <li class="dropdown-submenu">
-                  <Link  class="dropdown-item" tabindex="-1" to="#">Data Structure And Algorithms</Link>
+                  <Link  class="dropdown-item" tabindex="-1" to="/datastructurealgorithm/datastructure">Data Structure And Algorithms</Link>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><Link className="signd" tabindex="-1" to="#">Data Structure</Link></li>
+                    <li class="dropdown-item"><Link className="signd" tabindex="-1" to="/datastructurealgorithm/datastructure">Data Structure</Link></li>
                     {/*<li class="dropdown-submenu">
                      <Link class="dropdown-item signd" to="#">Even More..</Link>
                       <ul class="dropdown-menu">
@@ -59,17 +59,17 @@ export function Navbar(props) {
                             <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                       </ul>
   </li>*/}
-                    <li class="dropdown-item"><Link  className="signd" to="#">Algorithm</Link></li>
-                    <li class="dropdown-item"><Link   className="signd" to="#">Competitive Programming</Link></li>
-                    <li class="dropdown-item"><Link   className="signd" to="#">C++</Link></li>
-                    <li class="dropdown-item"><Link   className="signd" to="#">Others</Link></li>
+                    <li class="dropdown-item"><Link  className="signd" to="/datastructurealgorithm/algorithms">Algorithm</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/datastructurealgorithm/competitiveprogramming">Competitive Programming</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/datastructurealgorithm/c++">C++</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/datastructurealgorithm/other">Others</Link></li>
                   </ul>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li class="dropdown-submenu">
-                  <Link  class="dropdown-item" tabindex="-1" to="#">Web Development</Link>
+                  <Link  class="dropdown-item" tabindex="-1" to="/webdevelopment/reactjs">Web Development</Link>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><Link tabindex="-1" to="#">ReactJS</Link></li>
+                    <li class="dropdown-item"><Link tabindex="-1" to="/webdevelopment/reactjs">ReactJS</Link></li>
                   {/*  <li class="dropdown-submenu">
                       <Link class="dropdown-item" to="#">Even More..</Link>
                       <ul class="dropdown-menu">
@@ -84,17 +84,17 @@ export function Navbar(props) {
                             <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                       </ul>
 </li>*/}
-                    <li class="dropdown-item"><Link  className="signd" to="#">M.E.R.N</Link></li>
-                    <li class="dropdown-item"><Link  className="signd" to="#">C.S.S</Link></li>
-                    <li class="dropdown-item"><Link  className="signd" to="#">Java Script</Link></li>
-                    <li class="dropdown-item"><Link  className="signd" to="#">Others</Link></li>
+                    <li class="dropdown-item"><Link  className="signd" to="/webdevelopment/mern">M.E.R.N</Link></li>
+                    <li class="dropdown-item"><Link  className="signd" to="/webdevelopment/css">C.S.S</Link></li>
+                    <li class="dropdown-item"><Link  className="signd" to="/webdevelopment/js">Java Script</Link></li>
+                    <li class="dropdown-item"><Link  className="signd" to="/webdevelopment/other">Others</Link></li>
                   </ul>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li class="dropdown-submenu">
-                  <Link  class="dropdown-item" tabindex="-1" to="#">Data Science</Link>
+                  <Link  class="dropdown-item"  className="signd" tabindex="-1" to="/datascience/machinelearning">Data Science</Link>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><Link tabindex="-1" to="#">Machine Learning</Link></li>
+                    <li class="dropdown-item"><Link  className="signd" tabindex="-1" to="/datascience/machinelearning">Machine Learning</Link></li>
                    {/* <li class="dropdown-submenu">
                       <Link class="dropdown-item" to="#">Even More..</Link>
                       <ul class="dropdown-menu">
@@ -109,17 +109,19 @@ export function Navbar(props) {
                             <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                       </ul>
 </li>*/}
-                    <li class="dropdown-item"><Link to="#">Deep Learning</Link></li>
-                    <li class="dropdown-item"><Link to="#">Machine With Website</Link></li>
+                    <li class="dropdown-item"><Link className="signd" to="/datascience/deeplearning">Deep Learning</Link></li>
+                    <li class="dropdown-item"><Link className="signd" to="/datascience/mlwithweb">Machine With Website</Link></li>
+                    <li class="dropdown-item"><Link className="signd" to="/datascience/python">Python</Link></li>
+                    <li class="dropdown-item"><Link className="signd" to="/datascience/other">Others</Link></li>
                   </ul>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li class="dropdown-submenu">
-                  <Link  class="dropdown-item" tabindex="-1" to="#">Mobile App Development</Link>
+                  <Link  class="dropdown-item" tabindex="-1" to="/cloud/aws">Cloud</Link>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><Link tabindex="-1" to="#">Second level</Link></li>
-                    <li class="dropdown-submenu">
-                      <Link class="dropdown-item" to="#">Even More..</Link>
+                    <li class="dropdown-item"><Link className="signd" tabindex="-1" to="/cloud/aws">AWS</Link></li>
+                    {/*<li class="dropdown-submenu">
+                     <Link class="dropdown-item signd" to="#">Even More..</Link>
                       <ul class="dropdown-menu">
                           <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                             <li class="dropdown-submenu"><Link class="dropdown-item" to="#">another level</Link>
@@ -127,22 +129,24 @@ export function Navbar(props) {
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
-                            </ul>
+  </ul>
                           </li>
                             <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                       </ul>
-                    </li>
-                    <li class="dropdown-item"><Link to="#">Second level</Link></li>
-                    <li class="dropdown-item"><Link to="#">Second level</Link></li>
+  </li>*/}
+                    <li class="dropdown-item"><Link  className="signd" to="/cloud/heroku">Heroku</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/cloud/gcp">GCP</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/cloud/azure">Azure</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/cloud/other">Others</Link></li>
                   </ul>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li class="dropdown-submenu">
-                  <Link  class="dropdown-item" tabindex="-1" to="#">Gate Subjects</Link>
+                  <Link  class="dropdown-item"   tabindex="-1" to="/gatesubject/operatingsystem">Gate Subject</Link>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><Link tabindex="-1" to="#">Second level</Link></li>
-                    <li class="dropdown-submenu">
-                      <Link class="dropdown-item" to="#">Even More..</Link>
+                    <li class="dropdown-item"><Link className="signd" tabindex="-1" to="/gatesubject/operatingsystem">Operating System</Link></li>
+                    {/*<li class="dropdown-submenu">
+                     <Link class="dropdown-item signd" to="#">Even More..</Link>
                       <ul class="dropdown-menu">
                           <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                             <li class="dropdown-submenu"><Link class="dropdown-item" to="#">another level</Link>
@@ -150,22 +154,24 @@ export function Navbar(props) {
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
-                            </ul>
+  </ul>
                           </li>
                             <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                       </ul>
-                    </li>
-                    <li class="dropdown-item"><Link to="#">Second level</Link></li>
-                    <li class="dropdown-item"><Link to="#">Second level</Link></li>
+  </li>*/}
+                    <li class="dropdown-item"><Link  className="signd" to="/gatesubject/dbms">DBMS</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/gatesubject/oops">Oops</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/gatesubject/computernetwork">Computer Network</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/gatesubject/other">Others</Link></li>
                   </ul>
                 </li>
                 <li class="dropdown-divider"></li>
                 <li class="dropdown-submenu">
-                  <a  class="dropdown-item" tabindex="-1" to="#">Others</a>
+                  <Link  class="dropdown-item" className="signd"  tabindex="-1" to="/others/appdevelopment">Others</Link>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-item"><Link tabindex="-1" to="#">Second level</Link></li>
-                    <li class="dropdown-submenu">
-                      <Link class="dropdown-item" to="#">Even More..</Link>
+                    <li class="dropdown-item"><Link className="signd" tabindex="-1" to="/others/appdevelopment">App development</Link></li>
+                    {/*<li class="dropdown-submenu">
+                     <Link class="dropdown-item signd" to="#">Even More..</Link>
                       <ul class="dropdown-menu">
                           <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                             <li class="dropdown-submenu"><Link class="dropdown-item" to="#">another level</Link>
@@ -173,13 +179,14 @@ export function Navbar(props) {
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
                                 <li class="dropdown-item"><Link to="#">4th level</Link></li>
-                            </ul>
+  </ul>
                           </li>
                             <li class="dropdown-item"><Link to="#">3rd level</Link></li>
                       </ul>
-                    </li>
-                    <li class="dropdown-item"><Link to="#">Second level</Link></li>
-                    <li class="dropdown-item"><Link to="#">Second level</Link></li>
+  </li>*/}
+                    <li class="dropdown-item"><Link  className="signd" to="/others/docker">Docker</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="/others/git">Git</Link></li>
+                    <li class="dropdown-item"><Link   className="signd" to="others/other">Others</Link></li>
                   </ul>
                 </li>
               </ul>
