@@ -18,6 +18,7 @@ mongoose.connect(process.env.MONGO_URI,{
 app.use(cors())
 app.use(express.json())
 app.use('/auth',require('./routes/auth'))
+app.use('/api/resources', require('./routes/resource'));
 
 //Changes for deploying site
 if(process.env.NODE_ENV === 'production'){

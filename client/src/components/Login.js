@@ -29,6 +29,7 @@ export function Login (props){
               },
             }
           );
+          console.log(res);
           //on succesful login store token in local storage
           localStorage.setItem("token", res.data.token);
           props.history.push("/");

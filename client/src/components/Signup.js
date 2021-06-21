@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Login.css';
 
 export function Signup (props){
+    const [signeduser,setSigneduser] = useState({})
     const [data, setData] = useState({
         name: "",
         email: "",
@@ -21,7 +22,7 @@ export function Signup (props){
         e.preventDefault();
         try {
           setData({ ...data, error: null });
-          await axios.post(
+          const signedupuser = await axios.post(
             "/auth/signup",
             { name, email, password },
             {
@@ -30,7 +31,19 @@ export function Signup (props){
               },
             }
           );
-          props.history.push("/login");
+          setSigneduser(signedupuser)
+          console.log(signeduser)
+          const res = await axios.post(
+            "/auth/login",
+            { email, password },
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          localStorage.setItem("token", res.data.token);
+          props.history.push("/");
         } catch (err) {
           setData({ ...data, error: err.response.data.error });
         }

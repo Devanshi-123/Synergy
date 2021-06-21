@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/user");
+const Resource = require("../models/resource");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { requireLogin } = require("../middleware/auth");
@@ -62,7 +63,7 @@ router.post("/login", async (req, res) => {
 });
 
 // Get logged in user
-router.get("/", requireLogin, async (req, res) => {
+router.get("/:id",requireLogin, async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select("-password -__v");
     res.json(user);
@@ -71,5 +72,42 @@ router.get("/", requireLogin, async (req, res) => {
     return res.status(400).json({ error: err.message });
   }
 });
+
+router.get("/", async (req, res) => {
+  try {
+    const user = await User.find({});
+    res.json(user);
+  } catch (error) {
+    // console.log(err);
+    return res.status(400).json({ error: err.message });
+  }
+});
+
+
+
+//Add resource
+router.post('/addresource',async(req,res)=>{
+  const { URL,category,subcategory,topic,description,level,cost,type } = req.body;
+  console.log(category)
+  try{
+  let resource = new Resource({
+      URL,
+      category,
+      subcategory,
+      topic,
+      description,
+      cost,
+      type,
+      level,
+  })
+  await resource.save();
+  return res.status(201).json({ message: "Resource created successfully" });
+  } catch (err) {
+    // console.log(err);
+    return res.status(400).json({ error: err.message });
+  }
+});
+//get all resources
+
 
 module.exports = router;

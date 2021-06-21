@@ -1,15 +1,11 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 // import installed libraries
 import Carousel from "react-multi-carousel";
 
 // import css of react-multi-carousel
 import "react-multi-carousel/lib/styles.css";
 import "./Services.css";
-
-// importing images
-import image1 from '../img/python.png';
-import image2 from '../img/python.png';
-import image3 from '../img/python.png';
 
 const responsive = {
   superLargeDesktop: {
@@ -30,19 +26,26 @@ const responsive = {
   },
 };
 
-const CardItem = ({ image, header, para }) => (
+
+const CardItem = ({ image, header, para,sec}) => {
+  const one = sec.toLowerCase().replaceAll(' ','')
+  const two = header.toLowerCase().replaceAll(' ','')
+  return(
   <div className="box">
+    <Link to={`/${one}/${two}`}>
     <div className="box-image">
-      <img src={image} alt="" />
+      <img src={image} alt=""  style={{height:"180px"}} />
     </div>
     <div className="box-content">
       <h2 className="box-header">{header}</h2>
       <p>{para}</p>
     </div>
+    </Link>
   </div>
-);
+  );
+};
 
-const Service = ({ section, headers, images, paras }) => {
+const Service = ({ section, headers, images, paras}) => {
   return (
     <div>
       <h1 className="headings">{section}</h1>
@@ -54,6 +57,7 @@ const Service = ({ section, headers, images, paras }) => {
               header={header}
               image={images[index]}
               para={paras[index]}
+              sec={section}
             />
           );
         })}
