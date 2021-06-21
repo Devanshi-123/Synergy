@@ -11,7 +11,7 @@ const ResourceCard = ({topic,description,address}) => {
   <div className="card-body">
     <h5 className="card-title">{topic}</h5>
     <p className="card-text">{description}</p>
-    <a href="#" className="btn btn-info">{address}</a>
+    <a href={address} className="btn btn-info">{address}</a>
   </div>
 </div>
    
